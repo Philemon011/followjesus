@@ -70,8 +70,8 @@ export function Footer() {
 
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
-                
-              <a    key={social.label}
+
+                <a key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -124,8 +124,8 @@ export function Footer() {
             <p className="font-body text-xs tracking-wide text-white/40 mb-5">
               Une question ?
             </p>
-            
-            <a  href={`https://wa.me/${whatsappNumber.replace(/[^\d]/g, "")}`}
+
+            <a href={`https://wa.me/${whatsappNumber.replace(/[^\d]/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-body text-sm bg-white text-ink px-5 py-3 hover:bg-scarlet hover:text-white transition-colors"
@@ -145,6 +145,17 @@ export function Footer() {
           <p className="font-signature text-white/30 text-lg">
             Matthieu 4:19
           </p>
+        </div>
+
+        <div className="text-center pt-6">
+
+          <a href="https://philemondev.tech/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-[11px] text-white/25 hover:text-scarlet transition-colors"
+          >
+            Réalisé par Philémon
+          </a>
         </div>
       </div>
     </footer>
