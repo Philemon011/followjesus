@@ -10,14 +10,14 @@ const founders = [
     role: "Co-fondateur",
     photo: "/co/glory.jpeg",
     facebook: "https://www.facebook.com/askd.multimedia",
-    phone: "+229 53 81 72 60",
+    phone: "+229 01 53 81 72 60",
   },
   {
     name: "Etounde Lumière",
     role: "Co-fondateur",
     photo: "/co/lumière.jpeg",
     facebook: "https://www.facebook.com/philemon.etounde.77",
-    phone: "+229 53 81 72 60",
+    phone: "+229 01 60 58 59 50",
   },
 ];
 
