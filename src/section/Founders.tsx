@@ -8,7 +8,7 @@ const founders = [
   {
     name: "Assikidana Glory",
     role: "Co-fondateur",
-    photo: "https://placehold.co/500x625/FAFAF8/0A0A0A?text=Glory",
+    photo: "/co/glory.jpeg",
     facebook: "https://www.facebook.com/askd.multimedia",
     phone: "+229 53 81 72 60",
   },
