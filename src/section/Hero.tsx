@@ -11,12 +11,12 @@ const heroImages = [
     "/products/follow-jesus-2.png",
     "/products/follow-jesus-3.png",
     "/products/follow-jesus-6.png",
-    "/products/follow-jesus-black.png",
-    "/products/follow-jesus-white.jpg",
-    "/products/follow-jesus-femme.png",
-    "/products/follow-jesus-homme.png",
-    "/products/follow-jesus-black-white.png",
-    "/products/follow-jesus-bonhomme.png",
+    // "/products/follow-jesus-black.png",
+    // "/products/follow-jesus-white.jpg",
+    // "/products/follow-jesus-femme.png",
+    // "/products/follow-jesus-homme.png",
+    // "/products/follow-jesus-black-white.png",
+    // "/products/follow-jesus-bonhomme.png",
 ];
 
 export function Hero() {
