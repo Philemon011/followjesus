@@ -9,7 +9,7 @@ const heroImages = [
     "/products/follow-jesus-1.png",
     "/products/follow-jesus-2.png",
     "/products/follow-jesus-3.png",
-    "/products/follow-jesus-6.png",
+    "/products/follow-jesus-6.png", 
     "/products/follow-jesus-black.png",
     "/products/follow-jesus-white.jpg",
     "/products/follow-jesus-femme.png",
