@@ -148,15 +148,15 @@ export function Footer() {
         </div>
 
         <div className="text-center pt-6">
-
-          <a href="https://philemondev.tech/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-[11px] text-white/25 hover:text-scarlet transition-colors"
-          >
-            Réalisé par Philémon Etd
-          </a>
-        </div>
+  <a
+    href="https://philemondev.tech/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-body text-[11px] text-white/45 hover:text-scarlet underline underline-offset-4 decoration-white/30 hover:decoration-scarlet transition-all duration-300"
+  >
+    Réalisé par <span className="font-semibold text-white/70 hover:text-scarlet">Philémon Etd ↗</span>
+  </a>
+</div>
       </div>
     </footer>
   );
