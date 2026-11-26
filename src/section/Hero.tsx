@@ -51,7 +51,7 @@ export function Hero() {
                     href="/boutique"
                     className="inline-flex w-fit items-center gap-3 bg-white text-ink px-8 py-4 font-body font-medium text-sm md:text-base hover:bg-scarlet hover:text-white transition-colors"
                 >
-                    Découvrir la collection
+                    Découvrir la collection 
                 </Link>
             </motion.div>
 
