@@ -154,7 +154,7 @@ export function Footer() {
     rel="noopener noreferrer"
     className="font-body text-[11px] text-white/45 hover:text-scarlet underline underline-offset-4 decoration-white/30 hover:decoration-scarlet transition-all duration-300"
   >
-    Réalisé par <span className="font-semibold text-white/70 hover:text-scarlet">Philémon Etd ↗</span>
+    Réalisé par <span className="font-semibold text-white/70 hover:text-scarlet">Philémon Etd</span>
   </a>
 </div>
       </div>
