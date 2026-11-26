@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 export function WhatsAppButton() {
-  const whatsappNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "+22960585950").replace(
+  const whatsappNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "+22953461205").replace(
     /[^\d]/g,
     ""
   );

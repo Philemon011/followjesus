@@ -86,7 +86,7 @@ export function ContactPanel() {
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
 
-  const whatsappNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "+22960585950").replace(
+  const whatsappNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "+22953461205").replace(
     /[^\d]/g,
     ""
   );

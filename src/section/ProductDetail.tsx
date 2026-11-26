@@ -68,7 +68,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
     setTimeout(() => setJustAdded(false), 2000);
   };
 
-  const whatsappNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "+22960585950").replace(
+  const whatsappNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "+22953461205").replace(
     /[^\d]/g,
     ""
   );
