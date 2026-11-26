@@ -1,12 +1,13 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
-import { Product } from "./types";
+import { Language, Product } from "./types";
 
 export interface CartItem {
   product: Product;
   size: string;
   color: string;
+  language: Language;
   quantity: number;
 }
 
@@ -30,37 +31,45 @@ export function CartProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) setItems(JSON.parse(stored));
+      if (stored) {
+        const parsed: CartItem[] = JSON.parse(stored);
+        // ignore les anciens paniers (avant l'ajout de la langue)
+        setItems(parsed.filter((i) => i.language && i.product?.gender));
+      }
     } catch {
-      // localStorage indisponible (navigation privée...) — on continue avec un panier vide
+      // localStorage indisponible : on continue avec un panier vide
     }
     setHydrated(true);
   }, []);
 
   useEffect(() => {
-    if (hydrated) localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+    if (!hydrated) return;
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+    } catch {}
   }, [items, hydrated]);
 
   const addItem = (newItem: CartItem) => {
-  setItems((prev) => {
-    const existingIndex = prev.findIndex(
-      (i) =>
-        i.product.slug === newItem.product.slug &&
-        i.size === newItem.size &&
-        i.color === newItem.color
-    );
-
-    if (existingIndex !== -1) {
-      return prev.map((item, i) =>
-        i === existingIndex
-          ? { ...item, quantity: item.quantity + newItem.quantity }
-          : item
+    setItems((prev) => {
+      const existingIndex = prev.findIndex(
+        (i) =>
+          i.product.slug === newItem.product.slug &&
+          i.size === newItem.size &&
+          i.color === newItem.color &&
+          i.language === newItem.language
       );
-    }
 
-    return [...prev, newItem];
-  });
-};
+      if (existingIndex !== -1) {
+        return prev.map((item, i) =>
+          i === existingIndex
+            ? { ...item, quantity: item.quantity + newItem.quantity }
+            : item
+        );
+      }
+
+      return [...prev, newItem];
+    });
+  };
 
   const removeItem = (index: number) => {
     setItems((prev) => prev.filter((_, i) => i !== index));
@@ -68,7 +77,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const updateQuantity = (index: number, quantity: number) => {
     setItems((prev) =>
-      prev.map((item, i) => (i === index ? { ...item, quantity: Math.max(1, quantity) } : item))
+      prev.map((item, i) =>
+        i === index ? { ...item, quantity: Math.max(1, quantity) } : item
+      )
     );
   };
 

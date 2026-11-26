@@ -49,11 +49,11 @@ export function CheckoutForm() {
     if (!validate()) return;
 
     const lines = items.map(
-      (item) =>
-        `• ${item.product.name} — ${item.color}, taille ${item.size}, x${item.quantity} — ${formatPrice(
-          item.product.price * item.quantity
-        )}`
-    );
+  (item) =>
+    `• ${item.product.name} — ${item.language === "fr" ? "Français" : "Anglais"}, taille ${item.size}, x${item.quantity} — ${formatPrice(
+      item.product.price * item.quantity
+    )}`
+);
 
     const message = [
       `Bonjour, je souhaite passer commande :`,
@@ -145,7 +145,7 @@ export function CheckoutForm() {
                 className="flex justify-between font-body text-xs text-ink/70"
               >
                 <span className="truncate pr-2">
-                  {item.product.name} ({item.color}, {item.size}) x{item.quantity}
+                  {item.product.name} ({item.color}, {item.language.toUpperCase()}, {item.size}) x{item.quantity}
                 </span>
                 <span className="shrink-0">
                   {formatPrice(item.product.price * item.quantity)}

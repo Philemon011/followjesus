@@ -13,7 +13,7 @@ export const reviews: Review[] = [
     name: "Chantal A.",
     rating: 5,
     comment: "Le tissu est vraiment épais, on sent la qualité dès qu'on l'enfile. Et le message au dos attire toujours une remarque.",
-    productSlug: "follow-jesus-noir",
+    productSlug: "homme-noir",
     date: "Août 2026",
   },
   {
@@ -21,7 +21,7 @@ export const reviews: Review[] = [
     name: "Emmanuel K.",
     rating: 5,
     comment: "Commandé un lundi, reçu le mercredi à Cotonou. Coupe oversize parfaite, exactement comme sur les photos.",
-    productSlug: "follow-jesus-noir",
+    productSlug: "homme-noir",
     date: "Juillet 2026",
   },
   {
@@ -29,7 +29,7 @@ export const reviews: Review[] = [
     name: "Rachelle D.",
     rating: 4,
     comment: "Très beau t-shirt, taille un peu grand donc je conseille de prendre une taille en dessous. Sinon RAS.",
-    productSlug: "follow-jesus-blanc",
+    productSlug: "homme-blanc",
     date: "Juillet 2026",
   },
   {
@@ -37,7 +37,7 @@ export const reviews: Review[] = [
     name: "Josué M.",
     rating: 5,
     comment: "Ce n'est pas juste un t-shirt, c'est un vrai témoignage qu'on porte. Je vais en reprendre pour toute ma famille.",
-    productSlug: "follow-jesus-noir",
+    productSlug: "homme-noir",
     date: "Juin 2026",
   },
   {
@@ -45,7 +45,7 @@ export const reviews: Review[] = [
     name: "Grace T.",
     rating: 5,
     comment: "Le blanc reste impeccable après plusieurs lavages, aucune décoloration de l'impression. Très satisfaite.",
-    productSlug: "follow-jesus-blanc",
+    productSlug: "homme-blanc",
     date: "Juin 2026",
   },
   {
@@ -53,7 +53,7 @@ export const reviews: Review[] = [
     name: "Divine H.",
     rating: 5,
     comment: "Ma fille adore le sien, il est doux et la coupe est parfaite pour son âge. Je recommande.",
-    productSlug: "follow-jesus-girl-blanc",
+    productSlug: "femme-blanc",
     date: "Mai 2026",
   },
   {
@@ -61,7 +61,7 @@ export const reviews: Review[] = [
     name: "Steve O.",
     rating: 4,
     comment: "Bon rapport qualité-prix, livraison rapide via WhatsApp, échange facile pour un souci de taille.",
-    productSlug: "follow-jesus-blanc",
+    productSlug: "homme-blanc",
     date: "Mai 2026",
   },
   {
@@ -69,7 +69,7 @@ export const reviews: Review[] = [
     name: "Prisca L.",
     rating: 5,
     comment: "Le design au dos est magnifique en vrai, encore plus beau qu'en photo. Coup de cœur total.",
-    productSlug: "follow-jesus-girl-blanc",
+    productSlug: "femme-blanc",
     date: "Avril 2026",
   },
 ];

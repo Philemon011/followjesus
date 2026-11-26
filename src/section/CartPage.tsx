@@ -42,7 +42,7 @@ export function CartPage() {
           <AnimatePresence initial={false}>
             {items.map((item, index) => (
               <motion.div
-                key={`${item.product.slug}-${item.size}-${item.color}`}
+                key={`${item.product.slug}-${item.size}-${item.language}`}
                 initial={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0, marginTop: 0, marginBottom: 0 }}
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -50,14 +50,14 @@ export function CartPage() {
               >
                 <div className="flex gap-3 sm:gap-4 md:gap-6 py-6 border-b border-line">
   <div className="relative w-20 h-28 sm:w-24 sm:h-32 md:w-28 md:h-36 shrink-0 bg-paper">
-    <Image
-      src={item.product.images[0]}
-      alt={item.product.name}
-      fill
-      className="object-cover"
-      sizes="140px"
-    />
-  </div>
+  <Image
+    src={item.product.images[item.language][0]}
+    alt={`${item.product.name} — ${item.language === "fr" ? "Français" : "Anglais"}`}
+    fill
+    className="object-cover"
+    sizes="140px"
+  />
+</div>
 
   <div className="flex-1 flex flex-col justify-between min-w-0">
     <div>
@@ -65,8 +65,8 @@ export function CartPage() {
         {item.product.name}
       </p>
       <p className="font-body text-xs text-ink/50 mb-3">
-        {item.color} — Taille {item.size}
-      </p>
+  {item.color} — {item.language === "fr" ? "Français" : "Anglais"} — Taille {item.size}
+</p>
       <p className="font-display font-bold text-sm sm:hidden mb-3">
         {formatPrice(item.product.price * item.quantity)}
       </p>

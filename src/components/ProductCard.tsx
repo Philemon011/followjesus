@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Product } from "@/lib/types";
+import { Product, genderLabels } from "@/lib/types";
 import { StarRating } from "./StarRating";
 import { useCart } from "@/lib/cart-context";
 
@@ -15,37 +15,45 @@ export function ProductCard({ product }: { product: Product }) {
   const { addItem } = useCart();
   const [added, setAdded] = useState(false);
 
+  // Ajout rapide : version française, première taille. La personnalisation se fait sur la fiche.
   const handleQuickAdd = () => {
     addItem({
       product,
       size: product.sizes[0],
-      color: product.colors[0].label,
+      color: product.color.label,
+      language: "fr",
       quantity: 1,
     });
     setAdded(true);
     setTimeout(() => setAdded(false), 1500);
   };
 
+  const cover = product.images.fr;
+
   return (
     <div className="group">
       <Link href={`/boutique/${product.slug}`} className="block">
         <div className="relative aspect-[3/4] w-full overflow-hidden bg-paper">
           <Image
-            src={product.images[0]}
+            src={cover[0]}
             alt={product.name}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             sizes="(max-width: 768px) 50vw, 25vw"
           />
-          {product.images[1] && (
+          {cover[1] && (
             <Image
-              src={product.images[1]}
+              src={cover[1]}
               alt=""
               fill
               className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               sizes="(max-width: 768px) 50vw, 25vw"
             />
           )}
+
+          <span className="absolute top-3 left-3 bg-white text-ink font-body text-[10px] tracking-wide px-2 py-1">
+            FR · EN
+          </span>
 
           <button
             onClick={(e) => {
@@ -83,6 +91,10 @@ export function ProductCard({ product }: { product: Product }) {
         <Link href={`/boutique/${product.slug}`} className="block">
           <p className="font-body text-sm md:text-base mb-1">{product.name}</p>
         </Link>
+
+        <p className="font-body text-xs text-ink/50 mb-2">
+          {genderLabels[product.gender]} · {product.color.label}
+        </p>
 
         <div className="flex items-center justify-between">
           <p className="font-display font-bold text-sm md:text-base">
