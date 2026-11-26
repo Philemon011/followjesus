@@ -154,7 +154,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="font-body text-[11px] text-white/25 hover:text-scarlet transition-colors"
           >
-            Réalisé par Philémon
+            Réalisé par Philémon Etd
           </a>
         </div>
       </div>
