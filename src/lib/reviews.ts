@@ -7,72 +7,74 @@ export interface Review {
   date: string; // format lisible, ex: "Août 2026"
 }
 
+
 export const reviews: Review[] = [
   {
     id: "r1",
-    name: "Chantal A.",
+    name: "Mélanie A.",
     rating: 5,
-    comment: "Le tissu est vraiment épais, on sent la qualité dès qu'on l'enfile. Et le message au dos attire toujours une remarque.",
+    comment: "J'ai reçu mon t-shirt hier et franchement je ne suis pas déçue. Le tissu est agréable et le rendu du message au dos est vraiment propre.",
     productSlug: "homme-noir",
-    date: "Août 2026",
+    date: "Novembre 2026",
   },
   {
     id: "r2",
-    name: "Emmanuel K.",
+    name: "Samuel K.",
     rating: 5,
-    comment: "Commandé un lundi, reçu le mercredi à Cotonou. Coupe oversize parfaite, exactement comme sur les photos.",
+    comment: "Je l'ai porté à une sortie entre amis, plusieurs personnes m'ont demandé où je l'avais acheté. La coupe est bien large comme je voulais.",
     productSlug: "homme-noir",
-    date: "Juillet 2026",
+    date: "Novembre 2026",
   },
   {
     id: "r3",
-    name: "Rachelle D.",
+    name: "Esther D.",
     rating: 4,
-    comment: "Très beau t-shirt, taille un peu grand donc je conseille de prendre une taille en dessous. Sinon RAS.",
+    comment: "Très joli t-shirt, j'aime surtout le message et le design. J'aurais peut-être dû prendre une taille en dessous, mais il reste confortable.",
     productSlug: "homme-blanc",
-    date: "Juillet 2026",
+    date: "Novembre 2026",
   },
   {
     id: "r4",
-    name: "Josué M.",
+    name: "David M.",
     rating: 5,
-    comment: "Ce n'est pas juste un t-shirt, c'est un vrai témoignage qu'on porte. Je vais en reprendre pour toute ma famille.",
+    comment: "Ce que j'aime, c'est de pouvoir porter un message qui représente vraiment mes convictions. L'impression est nette et le t-shirt tombe bien.",
     productSlug: "homme-noir",
-    date: "Juin 2026",
+    date: "Octobre 2026",
   },
   {
     id: "r5",
-    name: "Grace T.",
+    name: "Grâce T.",
     rating: 5,
-    comment: "Le blanc reste impeccable après plusieurs lavages, aucune décoloration de l'impression. Très satisfaite.",
+    comment: "J'ai pris le blanc et il est encore très beau après plusieurs utilisations. L'impression n'a pas bougé après le lavage que j'ai fait.",
     productSlug: "homme-blanc",
-    date: "Juin 2026",
+    date: "Octobre 2026",
   },
   {
     id: "r6",
-    name: "Divine H.",
+    name: "Nadine H.",
     rating: 5,
-    comment: "Ma fille adore le sien, il est doux et la coupe est parfaite pour son âge. Je recommande.",
+    comment: "J'ai commandé pour mon petit frère. Il a beaucoup aimé le message au dos. La taille lui va bien et la livraison s'est bien passée.",
     productSlug: "femme-blanc",
-    date: "Mai 2026",
+    date: "Octobre 2026",
   },
   {
     id: "r7",
-    name: "Steve O.",
+    name: "Kevin O.",
     rating: 4,
-    comment: "Bon rapport qualité-prix, livraison rapide via WhatsApp, échange facile pour un souci de taille.",
+    comment: "Le t-shirt est conforme aux photos. J'ai juste eu un petit doute sur la taille au moment de commander, mais finalement ça me va.",
     productSlug: "homme-blanc",
-    date: "Mai 2026",
+    date: "Octobre 2026",
   },
   {
     id: "r8",
     name: "Prisca L.",
     rating: 5,
-    comment: "Le design au dos est magnifique en vrai, encore plus beau qu'en photo. Coup de cœur total.",
+    comment: "J'aime beaucoup le travail sur le dos du t-shirt. C'est simple, mais ça attire l'attention sans être trop chargé. Je suis satisfaite de mon achat.",
     productSlug: "femme-blanc",
-    date: "Avril 2026",
+    date: "Octobre 2026",
   },
 ];
+
 
 export function getReviewsForProduct(slug: string) {
   return reviews.filter((r) => r.productSlug === slug);
