@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -7,17 +8,24 @@ import { AnimatedText, headlineContainer } from "@/components/AnimatedText";
 const founders = [
   {
     name: "Assikidana Glory",
-    role: "Co-fondateur",
+    role: "Fondateur & CEO",
     photo: "/co/glory.jpeg",
     facebook: "https://www.facebook.com/askd.multimedia",
     phone: "+229 01 53 81 72 60",
   },
   {
     name: "Etounde Lumière",
-    role: "Co-fondateur",
+    role: "Directeur artistique & développeur",
     photo: "/co/lumière.jpeg",
     facebook: "https://www.facebook.com/philemon.etounde.77",
     phone: "+229 01 60 58 59 50",
+  },
+  {
+    name: "Thomas Hounvio",
+    role: "Responsable production & impression textile",
+    photo: "/co/thomas.jpeg",
+    facebook: "https://www.facebook.com/akovognonthomas.hounvio",
+    phone: "+229 66 07 73 21",
   },
 ];
 
@@ -37,14 +45,18 @@ export function Founders() {
           <AnimatedText text="DERRIÈRE LA MARQUE" />
         </motion.h2>
 
-        <div className="grid sm:grid-cols-2 gap-10 md:gap-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-8">
           {founders.map((founder, i) => (
             <motion.div
               key={founder.name}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              transition={{
+                duration: 0.6,
+                delay: i * 0.12,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="group"
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-white/5 mb-6">
@@ -59,22 +71,31 @@ export function Founders() {
               <p className="font-display font-bold text-xl md:text-2xl tracking-tight mb-1">
                 {founder.name}
               </p>
-              <p className="font-body text-xs text-scarlet mb-4">{founder.role}</p>
+
+              <p className="font-body text-xs text-scarlet mb-4">
+                {founder.role}
+              </p>
 
               <div className="flex items-center gap-4">
-                
-                <a  href={founder.facebook}
+                <a
+                  href={founder.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Profil Facebook de ${founder.name}`}
                   className="flex h-9 w-9 items-center justify-center border border-white/15 hover:border-scarlet hover:bg-scarlet transition-colors"
                 >
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
                     <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z" />
                   </svg>
                 </a>
-                
-                <a  href={`tel:${founder.phone.replace(/\s/g, "")}`}
+
+                <a
+                  href={`tel:${founder.phone.replace(/\s/g, "")}`}
                   className="font-body text-xs text-white/60 hover:text-scarlet transition-colors"
                 >
                   {founder.phone}
